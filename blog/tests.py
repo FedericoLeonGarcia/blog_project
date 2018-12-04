@@ -77,7 +77,7 @@ class BlogTests(TestCase):
 
         self.assertTemplateUsed(response, 'post_detail.html')
 
-    def test_post_create_view(self):  # new
+    def test_post_create_view(self):
 
         response = self.client.post(reverse('post_new'), {
 
@@ -95,7 +95,7 @@ class BlogTests(TestCase):
         self.assertContains(response, 'New text')
 
 
-    def test_post_update_view(self):  # new
+    def test_post_update_view(self):
 
         response = self.client.post(reverse('post_edit', args='1'), {
 
